@@ -5,8 +5,7 @@ This repository presents how you can direct all traffic from proxy to WireGuard.
 ## Generate keys for WireGuard
 
 ```shell
-umask 077
-wg genkey | tee privatekey | wg pubkey > publickey
+umask 077; wg genkey | tee privatekey | wg pubkey > publickey
 cat privatekey
 cat publickey
 ```
