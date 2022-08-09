@@ -10,6 +10,14 @@ cat privatekey
 cat publickey
 ```
 
+## Enable masquerade on server
+
+```shell
+nft add table nat
+nft 'add chain nat postrouting { type nat hook postrouting priority 100 ; }'
+nft add rule nat postrouting masquerade
+```
+
 ## Start proxy server
 
 For start proxy use this command:
